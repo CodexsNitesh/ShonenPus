@@ -1,7 +1,15 @@
-require("dotenv").config();
+// require("dotenv").config();
+// const mongoose = require("mongoose");
+// const Product = require("../models/product");
+// const dummyProducts = require("../data/dummyProducts");
+
+
+require("dotenv").config({ path: require("path").resolve(__dirname, "../.env") });
+
 const mongoose = require("mongoose");
 const Product = require("../models/product");
 const dummyProducts = require("../data/dummyProducts");
+
 
 const seedProducts = async () => {
   try {
