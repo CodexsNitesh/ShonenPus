@@ -7,7 +7,7 @@ import Login from "./pages/Login";
 import SignUpPage from "./pages/SignUpPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import ShopCategory from "./pages/ShopCategory"
-import Checkout from "./pages/Checkout";
+import Checkout from "./pages/checkout";
 import Orders from "./pages/orders";
 function App() {
   return (
