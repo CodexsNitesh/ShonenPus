@@ -1,4 +1,6 @@
-const imageBaseUrl = process.env.API_BASE_URL || "http://localhost:3000";
+// const imageBaseUrl = process.env.API_BASE_URL || "http://localhost:3000";
+const imageBaseUrl = process.env.BACKEND_URL || "https://shonenpus.onrender.com";
+
 
 const products = [
   ["Women", "Floral Wrap Peplum Blouse", 50, 80.5],
