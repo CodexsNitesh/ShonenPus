@@ -4,7 +4,8 @@ import { ShopContext } from "./ShopContextValue";
 
 export { ShopContext } from "./ShopContextValue";
 
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_URL;
 const CART_STORAGE_KEY = "trencshop_cart";
 
 const getCartKey = (productId, size = "M") => `${Number(productId)}:${String(size).toUpperCase()}`;

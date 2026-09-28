@@ -12,13 +12,21 @@ const GoogleAuthButton = ({ label = "Continue with Google" }) => {
   const handleSuccess = async (credentialResponse) => {
     try {
       setError("");
-      const res = await fetch("http://localhost:3000/auth/google", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/google`,{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ credential: credentialResponse.credential }),
       });
+      // setError("");
+      // const res = await fetch("http://localhost:3000/auth/google", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({ credential: credentialResponse.credential }),
+      // });
 
       const data = await res.json();
       if (!res.ok) {
