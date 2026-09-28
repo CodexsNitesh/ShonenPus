@@ -47,7 +47,8 @@ const allowedOrigins = [
   "http://localhost:5174",
   "http://localhost:5175",
   "http://localhost:5176",
-  "http://localhost:3000"
+  "http://localhost:3000",
+  process.env.FRONTEND_URL
 ];
 
 app.use(cors({
@@ -84,8 +85,11 @@ app.get("/" , (req, res, next) => {
 
 const port = process.env.PORT 
 
-app.listen(port, () => {
-    console.log(`Server is running on port http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is running on port http://localhost:${port}`);
+// });
 
+app.listen(port, "0.0.0.0", () => {
+    console.log(`Server is running on port ${port}`);
+});
 
